@@ -1,0 +1,4 @@
+nose==1.1.2
+nosegrowl2==0.2
+tdaemon==0.1.1
+wsgiref==0.1.2
