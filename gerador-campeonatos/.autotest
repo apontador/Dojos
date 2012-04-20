@@ -1,0 +1,4 @@
+#PLATFORM=RUBY_PLATFORM unless defined? PLATFORM
+#AUTOFEATURE=false
+#require 'redgreen/autotest'
+require 'test_notifier/runner/autotest'
