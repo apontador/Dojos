@@ -1,0 +1,2 @@
+def olaMundo():
+	return True

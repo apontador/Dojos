@@ -1,0 +1,4 @@
+nose==1.1.2
+nosegrowl2==0.2
+pywatch==0.4
+tdaemon==0.1.1
