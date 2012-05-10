@@ -40,14 +40,14 @@ Exemplos:
 
 	git clone git@github.com:apontador/Dojos.git
 	cd Dojos/caixa
-	pip install -r requirements.txt
+	sudo pip install -r requirements.txt
 
 
 ## Para rodar os testes
 
 Na raiz do projeto (Dojos/caixa) execute o comando:
 
-	pywatch notetests .
+	pywatch nosetests .
 
 Isso vai fazer com que os arquivos do projeto sejam monitorados. Caso algum arquivo seja salvo, o nosetests vai rodar os testes e se exibir um alerta (Testado no Mac) com o resultado do teste.
 
