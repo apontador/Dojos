@@ -49,5 +49,6 @@ Na raiz do projeto (Dojos/caixa) execute o comando:
 
 	pywatch nosetests .
 
-Isso vai fazer com que os arquivos do projeto sejam monitorados. Caso algum arquivo seja salvo, o nosetests vai rodar os testes e se exibir um alerta (Testado no Mac) com o resultado do teste.
+Isso vai fazer com que os arquivos do projeto sejam monitorados.
+Caso algum arquivo seja salvo, o nosetests vai rodar os testes e exibir um alerta com o resultado do teste.
 
