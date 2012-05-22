@@ -1,6 +1,6 @@
 <?php
 
-require_once('CampoMinado.php');
+use Apontador\CampoMinado;
 
 class CampoMinadoTest extends PHPUnit_Framework_TestCase
 {

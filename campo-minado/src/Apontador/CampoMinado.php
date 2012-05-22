@@ -1,5 +1,7 @@
 <?php
 
+namespace Apontador;
+
 define("BOMBA", "*");
 
 class CampoMinado
@@ -10,7 +12,6 @@ class CampoMinado
 	{
 		$this->mapaEntrada = $entrada;
 	}
-
 
 	public function getMapa() 
 	{

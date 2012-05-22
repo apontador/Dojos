@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Apontador\\CampoMinado": "src/"
+            "Apontador": "src/"
         }
     },
     "authors": [

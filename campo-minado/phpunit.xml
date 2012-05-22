@@ -18,7 +18,7 @@
     verbose="false">
     <testsuites>
         <testsuite name="Apontador - Unit">
-            <directory suffix="Test.php">.</directory>
+            <directory suffix="Test.php">test/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
