@@ -1,0 +1,13 @@
+{
+    "name": "apontador/campo-minado",
+    "description": "monta um tabuleiro de campo minado m x n com y bombas",
+    "require": {
+        "eher/phpunit": "1.5"
+    },
+    "authors": [
+        {
+            "name": "Apontador",
+            "email": "apt.dev@apontador.com"
+        }
+    ]
+}
