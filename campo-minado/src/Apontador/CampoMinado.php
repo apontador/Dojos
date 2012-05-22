@@ -6,61 +6,45 @@ define("BOMBA", "*");
 
 class CampoMinado
 {
-	private $mapaEntrada;
+	private $mapa;
 
 	public function __construct($entrada)
 	{
-		$this->mapaEntrada = $entrada;
+		$this->mapa = $entrada;
 	}
 
 	public function getMapa() 
 	{
-		$mapaResultado = $this->mapaEntrada;
-		for($linha=0; $linha < count($this->mapaEntrada); $linha++) {
-			for($coluna=0; $coluna < count($this->mapaEntrada[$linha]); $coluna++)
+		for($linha=0; $linha < count($this->mapa); $linha++) {
+			for($coluna=0; $coluna < count($this->mapa[$linha]); $coluna++)
 			{
-				if ($this->mapaEntrada[$linha][$coluna] == BOMBA) {
-					$this->populaAdjacentesDaBomba(&$mapaResultado, $linha, $coluna);
+				if ($this->mapa[$linha][$coluna] == BOMBA) {
+					$this->populaAdjacentesDaBomba($linha, $coluna);
 				}
 			}
 		}
 
-		return $mapaResultado;
+		return $this->mapa;
 	}
 
-	public function populaAdjacentesDaBomba($mapaResultado, $linha, $coluna) {
+	public function populaPosicao($linha, $coluna)
+	{
+		if (isset($this->mapa[$linha][$coluna])) {
+			$this->mapa[$linha][$coluna] = "1";
+		}
+	}
+
+	public function populaAdjacentesDaBomba($linha, $coluna)
+	{
+		$this->populaPosicao($linha, $coluna + 1);
+		$this->populaPosicao($linha, $coluna - 1);
 		
-		if (isset($mapaResultado[$linha][$coluna + 1])) {
-			$mapaResultado[$linha][$coluna + 1] = "1";
-		}
+		$this->populaPosicao($linha + 1, $coluna - 1);
+		$this->populaPosicao($linha + 1, $coluna);
+		$this->populaPosicao($linha + 1, $coluna + 1);
 
-		if (isset($mapaResultado[$linha][$coluna - 1])) {
-			$mapaResultado[$linha][$coluna - 1] = "1";
-		}
-		
-		if (isset($mapaResultado[$linha + 1][$coluna])) {
-			$mapaResultado[$linha + 1][$coluna]   = "1";
-		}
-		
-		if (isset($mapaResultado[$linha + 1][$coluna + 1])) {
-			$mapaResultado[$linha + 1][$coluna + 1] = "1";
-		}
-
-		if (isset($mapaResultado[$linha +1][$coluna - 1])) {
-			$mapaResultado[$linha + 1][$coluna - 1] = "1";
-		}
-
-		if (isset($mapaResultado[$linha - 1][$coluna])) {
-			$mapaResultado[$linha - 1][$coluna]   = "1";
-		}
-		
-		if (isset($mapaResultado[$linha - 1][$coluna + 1])) {
-			$mapaResultado[$linha - 1][$coluna + 1] = "1";
-		}
-
-		if (isset($mapaResultado[$linha - 1][$coluna - 1])) {
-			$mapaResultado[$linha - 1][$coluna - 1] = "1";
-		}
-
+		$this->populaPosicao($linha - 1, $coluna - 1);
+		$this->populaPosicao($linha - 1, $coluna);
+		$this->populaPosicao($linha - 1, $coluna + 1);
 	}
 }
