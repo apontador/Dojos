@@ -4,26 +4,26 @@ use Apontador\CampoMinado;
 
 class CampoMinadoTest extends PHPUnit_Framework_TestCase
 {
-	// public function testUmaBomba()
-	// {
-	// 	$entrada = array(
-	// 			array("*", "0", "0","0"),
-	// 			array("0", "0", "0","0"),
-	// 			array("0", "0", "0","0"),
-	// 			array("0", "0", "0","0"),
-	// 		);
-	// 	$campoMinado = new CampoMinado($entrada);
+	public function testUmaBomba()
+	{
+		$entrada = array(
+				array("*", "0", "0","0"),
+				array("0", "0", "0","0"),
+				array("0", "0", "0","0"),
+				array("0", "0", "0","0"),
+			);
+		$campoMinado = new CampoMinado($entrada);
 
-	// 	$esperado = array(
-	// 			array("*", "1", "0", "0"),
-	// 			array("1", "1", "0", "0"),
-	// 			array("0", "0", "0", "0"),
-	// 			array("0", "0", "0", "0"),
-	// 		);
+		$esperado = array(
+				array("*", "1", "0", "0"),
+				array("1", "1", "0", "0"),
+				array("0", "0", "0", "0"),
+				array("0", "0", "0", "0"),
+			);
 
-	// 	$this->assertSame($esperado, $campoMinado->getMapa());
+		$this->assertSame($esperado, $campoMinado->getMapa());
 
-	// }
+	}
 
 	public function test1x1ComBomba()
 	{
