@@ -100,7 +100,7 @@ class CampoMinadoTest extends PHPUnit_Framework_TestCase
 		$this->assertSame($esperado, $campoMinado->getMapa());
 	}
 
-		public function test2x2Com1BombaADireitaInferior()
+	public function test2x2Com1BombaADireitaInferior()
 	{
 		$entrada = array(
 				array("0", "0"),
@@ -115,7 +115,7 @@ class CampoMinadoTest extends PHPUnit_Framework_TestCase
 		$this->assertSame($esperado, $campoMinado->getMapa());
 	}
 
-		public function test2x2Com1BombaAEsquerdaInferior()
+	public function test2x2Com1BombaAEsquerdaInferior()
 	{
 		$entrada = array(
 				array("0", "0"),
