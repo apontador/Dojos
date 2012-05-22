@@ -4,6 +4,11 @@
     "require": {
         "eher/phpunit": "1.5"
     },
+    "autoload": {
+        "psr-0": {
+            "Apontador\\CampoMinado": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Apontador",
