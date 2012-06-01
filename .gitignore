@@ -13,8 +13,8 @@ target/
 *.ear
 
 # eclipse #
-.project
-.metadata
+**/*.project
+**/*.metadata
 bin/**
 tmp/**
 tmp/**/*
