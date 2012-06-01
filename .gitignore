@@ -1,2 +1,10 @@
 *.pyc
 *.swp
+
+target/
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
