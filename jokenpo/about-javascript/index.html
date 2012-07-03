@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>JavaScript</title>
+
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div id="impress">
+
+    <div class="step slide" data-x="-3000" data-y="0">
+        <h1>JavaScript</h1>
+    </div>
+
+    <div class="step slide" data-x="-2000" data-y="0">
+        <h2>WTF?</h2>
+        <h3 class="middle center">ECMAScript + DOM + BOM</h3>
+    </div>
+
+
+    <div class="step slide" data-x="-1000" data-y="0">
+        <h2>A corrente do protótipo</h2>
+        <code>
+            <pre>
+    var Person = function () {
+        var greeting = "Hello ";
+
+        this.name = null;
+
+        this.sayName = function () {
+            console.log(greeting + this.name);
+        }
+    }
+
+    Person.prototype.setName(name) {
+        this.name = name;
+    }
+            </pre>
+        </code>
+    </div>
+
+    <div class="step slide">
+        <h2>A corrente do protótipo</h2>
+        <code>
+            <pre>
+    var Developer = function () {
+        this.surname = null;
+    }
+
+    Developer.prototype = new Person();
+    Developer.prototype.setSurname = function(surname) {
+        this.surname = surname;
+    }
+
+    var developer = new Developer();
+
+    console.log(developer.__proto__) // Person
+            </pre>
+        </code>
+    </div>
+
+    <div class="step slide" data-x="+1000" data-y="0">
+        <h2>Escopo</h2>
+        <code>
+            <pre>
+    var foo = "bar",
+        lorem = "ipsun";
+
+    function fighter () {
+        var foo = "fighter";
+
+        console.log("foo " + foo);
+        console.log("lorem " + lorem);
+    }
+
+    fighter() // foo fighter
+              // lorem ipsun
+
+    console.log("foo " + foo);      // foo bar
+    console.log("lorem " + lorem);  // lorem ipsun
+            </pre>
+        </code>
+    </div>
+
+    <div class="step slide" data-x="+2000" data-y="0">
+        <h2>Global</h2>
+        <ul>
+            <li>window - Browser</li>
+            <li>global - Node.js</li>
+            <li>Mark and Sweep vs Reference Count</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="+3000" data-y="0">
+        <h2>The Bad Parts</h2>
+    <code>
+        <pre>
+'' == '0'           // false
+0 == ''             // true
+0 == '0'            // true
+
+false == 'false'    // false
+false == '0'        // true
+
+false == undefined  // false
+false == null       // false
+null == undefined   // true
+
+' \t\r\n ' == 0     // true
+        </pre>
+    <code>
+    </div>
+
+    <div class="step slide" data-x="+4000" data-y="0">
+        <h2>The Bad Parts</h2>
+        <code>
+            <pre>
+parseInt('10') // 10
+parseInt('010') // 8
+parseInt('0x10') // 16
+            </pre>
+        </code>
+    </div>
+
+    <div class="step slide" data-x="+5000" data-y="0">
+        <h2>The Bad Parts</h2>
+        <code>
+            <pre>
+NaN == NaN // false
+typeof NaN // number
+            </pre>
+        </code>
+    </div>
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="5">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
