@@ -33,6 +33,7 @@ As regras são as seguintes:
 * Spock vaporiza pedra
 * Pedra esmaga tesoura
 
+**Original:** http://dojopuzzles.com/problemas/exibe/jokenpo/
 
 Dependências
 ------------
