@@ -15,23 +15,23 @@ O objetivo é fazer um juiz de Jokenpo que dada a jogada dos dois jogadores info
 
 As regras são as seguintes:
 
-Pedra empata com Pedra e ganha de Tesoura
-Tesoura empata com Tesoura e ganha de Papel
-Papel empata com Papel e ganha de Pedra
+* Pedra empata com Pedra e ganha de Tesoura
+* Tesoura empata com Tesoura e ganha de Papel
+* Papel empata com Papel e ganha de Pedra
 
 
 *Adicional*: Lagarto e Spock
 
-Tesoura corta papel
-Papel cobre pedra
-Pedra esmaga Lagarto
-Lagarto envenena Spock
-Spock dobra tesoura
-Tesoura decapita lagarto
-Lagarto come papel
-Papel desqualifica Spock
-Spock vaporiza pedra
-Pedra esmaga tesoura
+* Tesoura corta papel
+* Papel cobre pedra
+* Pedra esmaga Lagarto
+* Lagarto envenena Spock
+* Spock dobra tesoura
+* Tesoura decapita lagarto
+* Lagarto come papel
+* Papel desqualifica Spock
+* Spock vaporiza pedra
+* Pedra esmaga tesoura
 
 
 Dependências
